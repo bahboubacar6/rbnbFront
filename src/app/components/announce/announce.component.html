@@ -1,0 +1,24 @@
+<div class="container mt-3">
+    <div class="card" *ngIf="annonces">
+        <div class="card-header">Liste des annonces</div>
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id</th><th>Type Annonce</th><th>Date</th><th>Date Debut</th><th>Date Fin</th><th>Image</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let an of annonces">
+                        <td>{{an.idAnnounce}}</td>
+                        <td>{{an.typeAnnounce}}</td>
+                        <td>{{an.date}}</td>
+                        <td>{{an.startDate}}</td>
+                        <td>{{an.endDate}}</td>
+                        <td style="height: 10px;"><img src="{{an.image}}"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
